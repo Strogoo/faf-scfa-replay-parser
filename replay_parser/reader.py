@@ -2,7 +2,7 @@ from io import SEEK_END, SEEK_SET, BytesIO, FileIO, RawIOBase
 from struct import unpack
 from typing import Dict, Optional, Union
 
-from replay_parser.constants import DataType
+from constants import DataType
 
 __all__ = ('ReplayReader', 'TYPE_LUA', 'ACCEPTABLE_DATA_TYPE')
 

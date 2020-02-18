@@ -1,7 +1,7 @@
 from typing import Tuple, Optional, List, Dict, Union
 
-from replay_parser.constants import TargetType, CommandStates
-from replay_parser.reader import ReplayReader, TYPE_LUA
+from constants import TargetType, CommandStates
+from reader import ReplayReader, TYPE_LUA
 
 __all__ = ('COMMAND_PARSERS',)
 

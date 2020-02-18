@@ -1,10 +1,10 @@
 import struct
 from typing import Any, Dict, Iterator, List, Optional, Tuple
 
-from replay_parser.exception import InvalidReplay
-from replay_parser.commands import COMMAND_PARSERS
-from replay_parser.constants import CommandStateNames, CommandStates
-from replay_parser.reader import ACCEPTABLE_DATA_TYPE, ReplayReader
+from exception import InvalidReplay
+from commands import COMMAND_PARSERS
+from constants import CommandStateNames, CommandStates
+from reader import ACCEPTABLE_DATA_TYPE, ReplayReader
 
 __all__ = ('ReplayBody',)
 

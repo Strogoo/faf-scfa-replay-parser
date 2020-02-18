@@ -1,9 +1,9 @@
 from io import RawIOBase
 from typing import Any, Dict, Iterator, Tuple, Union
 
-from replay_parser.body import ReplayBody
-from replay_parser.header import ReplayHeader
-from replay_parser.reader import ReplayReader
+from body import ReplayBody
+from header import ReplayHeader
+from reader import ReplayReader
 
 __all__ = ('parse', 'continuous_parse',)
 
@@ -11,6 +11,7 @@ __all__ = ('parse', 'continuous_parse',)
 def parse(
         input_data: Union[RawIOBase, bytearray, bytes],
         parse_body: bool = True,
+        parse_commands = {},
         **kwargs
 ) -> Dict[str, Any]:
     """
@@ -26,7 +27,7 @@ def parse(
     }
 
     if parse_body:
-        body_parser = ReplayBody(reader, **kwargs)
+        body_parser = ReplayBody(reader, True, parse_commands, True, **kwargs)
         body_parser.parse()
         result["body"] = body_parser.get_body()
         result["messages"] = body_parser.get_messages()

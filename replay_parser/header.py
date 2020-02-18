@@ -1,6 +1,6 @@
 from typing import Dict
 
-from replay_parser.reader import ReplayReader
+from reader import ReplayReader
 
 
 class ReplayHeader:
